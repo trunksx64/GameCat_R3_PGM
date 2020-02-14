@@ -157,7 +157,7 @@ section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200               0xa1a           0xf27  (3879)
 .const                       0xc1a              0x27a4          0x3b76  (15222)
-_053806405e4706fe           0x33be                0x6c            0xa2  (162)
+_053216405e47076e           0x33be                0x6c            0xa2  (162)
 .text                       0x342a              0x647c          0x96ba  (38586)
 .dinit                      0x98a6               0x19c           0x26a  (618)
 .text                       0x9a42               0x9d6           0xec1  (3777)
@@ -180,7 +180,7 @@ section                    address      alignment gaps    total length  (dec)
 .bss                        0x1886                   0             0xe  (14)
 .data                       0x1894                   0             0x4  (4)
 .heap                       0x1898                   0            0x20  (32)
-_00000000052E53C05e4706ff    0x2700                   0            0x80  (128)
+_00000000052E53C05e47076e    0x2700                   0            0x80  (128)
 .bss                        0x2780                   0            0x62  (98)
 .bss                        0x27e2                   0            0x1e  (30)
 
@@ -935,17 +935,17 @@ usercode
 
 __FBS             0xf80000          0x2
  *(__FBS.sec*)
- __FBS.sec        0xf80000          0x2 /CW/_FBSð«>
+ __FBS.sec        0xf80000          0x2 /CW/_FBSà›4
                   0xf80000                  __FBS.sec
 
 __FSS             0xf80002          0x2
  *(__FSS.sec*)
- __FSS.sec        0xf80002          0x2 /CW/_FSS°k>
+ __FSS.sec        0xf80002          0x2 /CW/_FSSÐ‹4
                   0xf80002                  __FSS.sec
 
 __FGS             0xf80004          0x2
  *(__FGS.sec*)
- __FGS.sec        0xf80004          0x2 /CW/_FGSà›>
+ __FGS.sec        0xf80004          0x2 /CW/_FGSP4
                   0xf80004                  __FGS.sec
 
 __FOSCSEL
@@ -2256,9 +2256,9 @@ LOAD c:/program files/microchip/xc16/v1.50/bin/bin/../../lib\libm-elf.a
 LOAD c:/program files/microchip/xc16/v1.50/bin/bin/../../lib\libc-elf.a
 END GROUP
 OUTPUT(dist/GameCat_XC24H/production/GameCat_XC24H.production.elf elf32-pic30)
-LOAD /CW/_FGSà›>
-LOAD /CW/_FSS°k>
-LOAD /CW/_FBSð«>
+LOAD /CW/_FGSP4
+LOAD /CW/_FSSÐ‹4
+LOAD /CW/_FBSà›4
 LOAD jump_table
 LOAD default_isr
 LOAD heap
@@ -2462,9 +2462,9 @@ __c30_signature
  __c30_signature
                   0x0024b0          0x6 c:/program files/microchip/xc16/v1.50/bin/bin/../../lib\libm-elf.a(mulsi3.eo)
 
-_00000000052E53C05e4706ff
+_00000000052E53C05e47076e
                     0x2700         0x80
- _00000000052E53C05e4706ff
+ _00000000052E53C05e47076e
                     0x2700         0x80 build/GameCat_XC24H/production/drivers/driver_controller_area_network.o
                     0x2700                  _EcanBufferStorage
 
@@ -2648,9 +2648,9 @@ _00000000052E53C05e4706ff
  .const             0xb3b6          0x6 build/GameCat_XC24H/production/system/tasks.o
  .const             0xb3bc          0x2 build/GameCat_XC24H/production/system/portable/MemMang/heap_4.o
 
-_053806405e4706fe
+_053216405e47076e
                     0xb3be         0x6c load address 0x0033be  
- _053806405e4706fe
+ _053216405e47076e
                     0xb3be         0x6c build/GameCat_XC24H/production/controls/control_parameters_can.o
                     0xb3be                  _pxAddressxSystemParametersCAN
 

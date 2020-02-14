@@ -4,9 +4,6 @@
 
 /* < Main :::: Function > */
 int16_t main(void) {
-    
-    
-    
     /* < Break ::: DEBUG > */
     pdNop();
     /* < Configuracion ::: Puertos y Reloj... > */
