@@ -1,8 +1,0 @@
-build/GameCat_R3_PGM/debug/main/main_function.o:  \
-main/main_function.c  \
- include/main_fuses.h  \
-include/main_configuration.h  \
- include/main_typedefs.h  \
-include/main_delays.h  \
- include/driver_direct_memory_access.h  \
- include/driver_controller_area_network.h 

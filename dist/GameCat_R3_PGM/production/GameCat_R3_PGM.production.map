@@ -101,11 +101,11 @@ section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200               0x110           0x198  (408)
 .const                       0x310                0x26            0x39  (57)
-.text                        0x336              0x23ee          0x35e5  (13797)
-.init.delay32               0x2724                0x1c            0x2a  (42)
-.dinit                      0x2740                0x1c            0x2a  (42)
+.text                        0x336              0x23ec          0x35e2  (13794)
+.init.delay32               0x2722                0x1c            0x2a  (42)
+.dinit                      0x273e                0x1c            0x2a  (42)
 
-                 Total "program" memory used (bytes):         0x380a  (14346) 10%
+                 Total "program" memory used (bytes):         0x3807  (14343) 10%
 
 
 "data" Memory  [Origin = 0x800, Length = 0x2000]
@@ -114,7 +114,7 @@ section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
 .nbss                        0x800                   0           0x50c  (1292)
 .ndata                       0xd0c                   0             0x2  (2)
-_00000000047593205e88e575    0x2700                   0            0x80  (128)
+_0000000003FC43205e964ac8    0x2700                   0            0x80  (128)
 .heap                       0x2780                   0            0x10  (16)
 
                  Total "data" memory used (bytes):          0x59e  (1438) 17%
@@ -152,76 +152,76 @@ External Symbols in Program Memory (by address):
                   0x0002fc                  __DefaultInterrupt
                   0x000302                  _memcpy
                   0x000336                  _vConfigureCANModule
-                  0x00043e                  _vCANModuleConfigureBuffers
-                  0x0005b4                  _vCANModuleSelectMaskToFilter
-                  0x000760                  _vCANModuleSetMaskSID
-                  0x0007b6                  _vCANModuleSetFiltersSID
-                  0x000904                  _vCANModuleSetMaskXTD
-                  0x00099e                  _vCANModuleSetFiltersXTD
-                  0x000c4e                  _vCANModuleSelectBufferToFilter
-                  0x000df2                  _vCANModuleSetSendTransmission
-                  0x000e48                  _xSetModeOperation
-                  0x000ea2                  _xCANModuleClearReceiveFlags
-                  0x000f32                  _vCANModuleSendMessege
-                  0x00116c                  _vCANModuleReceiveMessege
-                  0x001334                  _xQueueGenericReset
-                  0x0013bc                  _xQueueGenericCreate
-                  0x00142e                  _xQueueGenericSend
-                  0x00150c                  _xQueueGenericSendFromISR
-                  0x001584                  _xQueueGiveFromISR
-                  0x0015f0                  _xQueueReceive
-                  0x0016c8                  _xQueueSemaphoreTake
-                  0x001798                  _xQueuePeek
-                  0x001874                  _xQueueReceiveFromISR
-                  0x0018e4                  _xQueuePeekFromISR
-                  0x00191c                  _uxQueueMessagesWaiting
-                  0x001930                  _uxQueueSpacesAvailable
-                  0x00194e                  _uxQueueMessagesWaitingFromISR
-                  0x001962                  _vQueueDelete
-                  0x001aec                  _xQueueIsQueueEmptyFromISR
-                  0x001b30                  _xQueueIsQueueFullFromISR
-                  0x001b54                  _xTaskCreate
-                  0x001cf0                  _vTaskStartScheduler
-                  0x001d26                  _vTaskEndScheduler
-                  0x001d3e                  _vTaskSuspendAll
-                  0x001d4a                  _xTaskResumeAll
-                  0x001df4                  _xTaskGetTickCount
-                  0x001e04                  _xTaskGetTickCountFromISR
-                  0x001e14                  _uxTaskGetNumberOfTasks
-                  0x001e1c                  _pcTaskGetName
-                  0x001e36                  _xTaskCatchUpTicks
-                  0x001e52                  _xTaskIncrementTick
-                  0x001f30                  _vTaskSwitchContext
-                  0x001f94                  _vTaskPlaceOnEventList
-                  0x001fae                  _vTaskPlaceOnUnorderedEventList
-                  0x001fd2                  _xTaskRemoveFromEventList
-                  0x002040                  _vTaskRemoveFromUnorderedEventList
-                  0x002094                  _vTaskSetTimeOutState
-                  0x0020ac                  _vTaskInternalSetTimeOutState
-                  0x0020c0                  _xTaskCheckForTimeOut
-                  0x002122                  _vTaskMissedYield
-                  0x00212c                  build/GameCat_R3_PGM/production/system/tasks.o:_prvIdleTask
-                  0x002190                  _uxTaskResetEventItemValue
-                  0x0021ec                  _vListInitialise
-                  0x00221e                  _vListInitialiseItem
-                  0x00222c                  _vListInsertEnd
-                  0x002268                  _vListInsert
-                  0x0022cc                  _uxListRemove
-                  0x002314                  _pxPortInitialiseStack
-                  0x0023a4                  _xPortStartScheduler
-                  0x0023d2                  _vPortEndScheduler
-                  0x002400                  _vPortEnterCritical
-                  0x00241a                  _vPortExitCritical
-                  0x002436                  _main
-                  0x00251c                  _vConfigureDMAZeroModule
-                  0x002586                  _vConfigureDMAOneModule
-                  0x0025f2                  _pvPortMalloc
-                  0x002648                  _vPortFree
-                  0x002650                  _vPortInitialiseBlocks
-                  0x002658                  _xPortGetFreeHeapSize
-                  0x002664                  _vHardwareConfiguration
-                  0x0026d4                  _vPortYield
-                  0x002724                  ___delay32
+                  0x000404                  _vCANModuleConfigureBuffers
+                  0x00057a                  _vCANModuleSelectMaskToFilter
+                  0x000726                  _vCANModuleSetMaskSID
+                  0x00077c                  _vCANModuleSetFiltersSID
+                  0x0008ca                  _vCANModuleSetMaskXTD
+                  0x000964                  _vCANModuleSetFiltersXTD
+                  0x000c14                  _vCANModuleSelectBufferToFilter
+                  0x000db8                  _vCANModuleSetSendTransmission
+                  0x000e0e                  _xSetModeOperation
+                  0x000e68                  _xCANModuleClearReceiveFlags
+                  0x000ef8                  _vCANModuleSendMessege
+                  0x001132                  _vCANModuleReceiveMessege
+                  0x0012fa                  _xQueueGenericReset
+                  0x001382                  _xQueueGenericCreate
+                  0x0013f4                  _xQueueGenericSend
+                  0x0014d2                  _xQueueGenericSendFromISR
+                  0x00154a                  _xQueueGiveFromISR
+                  0x0015b6                  _xQueueReceive
+                  0x00168e                  _xQueueSemaphoreTake
+                  0x00175e                  _xQueuePeek
+                  0x00183a                  _xQueueReceiveFromISR
+                  0x0018aa                  _xQueuePeekFromISR
+                  0x0018e2                  _uxQueueMessagesWaiting
+                  0x0018f6                  _uxQueueSpacesAvailable
+                  0x001914                  _uxQueueMessagesWaitingFromISR
+                  0x001928                  _vQueueDelete
+                  0x001ab2                  _xQueueIsQueueEmptyFromISR
+                  0x001af6                  _xQueueIsQueueFullFromISR
+                  0x001b1a                  _xTaskCreate
+                  0x001cb6                  _vTaskStartScheduler
+                  0x001cec                  _vTaskEndScheduler
+                  0x001d04                  _vTaskSuspendAll
+                  0x001d10                  _xTaskResumeAll
+                  0x001dba                  _xTaskGetTickCount
+                  0x001dca                  _xTaskGetTickCountFromISR
+                  0x001dda                  _uxTaskGetNumberOfTasks
+                  0x001de2                  _pcTaskGetName
+                  0x001dfc                  _xTaskCatchUpTicks
+                  0x001e18                  _xTaskIncrementTick
+                  0x001ef6                  _vTaskSwitchContext
+                  0x001f5a                  _vTaskPlaceOnEventList
+                  0x001f74                  _vTaskPlaceOnUnorderedEventList
+                  0x001f98                  _xTaskRemoveFromEventList
+                  0x002006                  _vTaskRemoveFromUnorderedEventList
+                  0x00205a                  _vTaskSetTimeOutState
+                  0x002072                  _vTaskInternalSetTimeOutState
+                  0x002086                  _xTaskCheckForTimeOut
+                  0x0020e8                  _vTaskMissedYield
+                  0x0020f2                  build/GameCat_R3_PGM/production/system/tasks.o:_prvIdleTask
+                  0x002156                  _uxTaskResetEventItemValue
+                  0x0021b2                  _vListInitialise
+                  0x0021e4                  _vListInitialiseItem
+                  0x0021f2                  _vListInsertEnd
+                  0x00222e                  _vListInsert
+                  0x002292                  _uxListRemove
+                  0x0022da                  _pxPortInitialiseStack
+                  0x00236a                  _xPortStartScheduler
+                  0x002398                  _vPortEndScheduler
+                  0x0023c6                  _vPortEnterCritical
+                  0x0023e0                  _vPortExitCritical
+                  0x0023fc                  _main
+                  0x0024e2                  _vConfigureDMAZeroModule
+                  0x00254c                  _vConfigureDMAOneModule
+                  0x0025b8                  _vHardwareConfiguration
+                  0x002660                  _pvPortMalloc
+                  0x0026b6                  _vPortFree
+                  0x0026be                  _vPortInitialiseBlocks
+                  0x0026c6                  _xPortGetFreeHeapSize
+                  0x0026d2                  _vPortYield
+                  0x002722                  ___delay32
                   0xf80000                  __FBS.sec
                   0xf80002                  __FSS.sec
                   0xf80004                  __FGS.sec
@@ -233,82 +233,82 @@ External Symbols in Program Memory (by name):
                   0xf80004                  __FGS.sec
                   0xf80002                  __FSS.sec
                   0x0002cc                  __T1Interrupt
-                  0x002724                  ___delay32
+                  0x002722                  ___delay32
                   0x000252                  __data_init
                   0x000252                  __data_init_standard
                   0x00023c                  __psv_init
                   0x000200                  __resetPRI
-                  0x002436                  _main
+                  0x0023fc                  _main
                   0x000302                  _memcpy
-                  0x001e1c                  _pcTaskGetName
-                  0x0025f2                  _pvPortMalloc
-                  0x002314                  _pxPortInitialiseStack
-                  0x0022cc                  _uxListRemove
-                  0x00191c                  _uxQueueMessagesWaiting
-                  0x00194e                  _uxQueueMessagesWaitingFromISR
-                  0x001930                  _uxQueueSpacesAvailable
-                  0x001e14                  _uxTaskGetNumberOfTasks
-                  0x002190                  _uxTaskResetEventItemValue
-                  0x00043e                  _vCANModuleConfigureBuffers
-                  0x00116c                  _vCANModuleReceiveMessege
-                  0x000c4e                  _vCANModuleSelectBufferToFilter
-                  0x0005b4                  _vCANModuleSelectMaskToFilter
-                  0x000f32                  _vCANModuleSendMessege
-                  0x0007b6                  _vCANModuleSetFiltersSID
-                  0x00099e                  _vCANModuleSetFiltersXTD
-                  0x000760                  _vCANModuleSetMaskSID
-                  0x000904                  _vCANModuleSetMaskXTD
-                  0x000df2                  _vCANModuleSetSendTransmission
+                  0x001de2                  _pcTaskGetName
+                  0x002660                  _pvPortMalloc
+                  0x0022da                  _pxPortInitialiseStack
+                  0x002292                  _uxListRemove
+                  0x0018e2                  _uxQueueMessagesWaiting
+                  0x001914                  _uxQueueMessagesWaitingFromISR
+                  0x0018f6                  _uxQueueSpacesAvailable
+                  0x001dda                  _uxTaskGetNumberOfTasks
+                  0x002156                  _uxTaskResetEventItemValue
+                  0x000404                  _vCANModuleConfigureBuffers
+                  0x001132                  _vCANModuleReceiveMessege
+                  0x000c14                  _vCANModuleSelectBufferToFilter
+                  0x00057a                  _vCANModuleSelectMaskToFilter
+                  0x000ef8                  _vCANModuleSendMessege
+                  0x00077c                  _vCANModuleSetFiltersSID
+                  0x000964                  _vCANModuleSetFiltersXTD
+                  0x000726                  _vCANModuleSetMaskSID
+                  0x0008ca                  _vCANModuleSetMaskXTD
+                  0x000db8                  _vCANModuleSetSendTransmission
                   0x000336                  _vConfigureCANModule
-                  0x002586                  _vConfigureDMAOneModule
-                  0x00251c                  _vConfigureDMAZeroModule
-                  0x002664                  _vHardwareConfiguration
-                  0x0021ec                  _vListInitialise
-                  0x00221e                  _vListInitialiseItem
-                  0x002268                  _vListInsert
-                  0x00222c                  _vListInsertEnd
-                  0x0023d2                  _vPortEndScheduler
-                  0x002400                  _vPortEnterCritical
-                  0x00241a                  _vPortExitCritical
-                  0x002648                  _vPortFree
-                  0x002650                  _vPortInitialiseBlocks
-                  0x0026d4                  _vPortYield
-                  0x001962                  _vQueueDelete
-                  0x001d26                  _vTaskEndScheduler
-                  0x0020ac                  _vTaskInternalSetTimeOutState
-                  0x002122                  _vTaskMissedYield
-                  0x001f94                  _vTaskPlaceOnEventList
-                  0x001fae                  _vTaskPlaceOnUnorderedEventList
-                  0x002040                  _vTaskRemoveFromUnorderedEventList
-                  0x002094                  _vTaskSetTimeOutState
-                  0x001cf0                  _vTaskStartScheduler
-                  0x001d3e                  _vTaskSuspendAll
-                  0x001f30                  _vTaskSwitchContext
-                  0x000ea2                  _xCANModuleClearReceiveFlags
-                  0x002658                  _xPortGetFreeHeapSize
-                  0x0023a4                  _xPortStartScheduler
-                  0x0013bc                  _xQueueGenericCreate
-                  0x001334                  _xQueueGenericReset
-                  0x00142e                  _xQueueGenericSend
-                  0x00150c                  _xQueueGenericSendFromISR
-                  0x001584                  _xQueueGiveFromISR
-                  0x001aec                  _xQueueIsQueueEmptyFromISR
-                  0x001b30                  _xQueueIsQueueFullFromISR
-                  0x001798                  _xQueuePeek
-                  0x0018e4                  _xQueuePeekFromISR
-                  0x0015f0                  _xQueueReceive
-                  0x001874                  _xQueueReceiveFromISR
-                  0x0016c8                  _xQueueSemaphoreTake
-                  0x000e48                  _xSetModeOperation
-                  0x001e36                  _xTaskCatchUpTicks
-                  0x0020c0                  _xTaskCheckForTimeOut
-                  0x001b54                  _xTaskCreate
-                  0x001df4                  _xTaskGetTickCount
-                  0x001e04                  _xTaskGetTickCountFromISR
-                  0x001e52                  _xTaskIncrementTick
-                  0x001fd2                  _xTaskRemoveFromEventList
-                  0x001d4a                  _xTaskResumeAll
-                  0x00212c                  build/GameCat_R3_PGM/production/system/tasks.o:_prvIdleTask
+                  0x00254c                  _vConfigureDMAOneModule
+                  0x0024e2                  _vConfigureDMAZeroModule
+                  0x0025b8                  _vHardwareConfiguration
+                  0x0021b2                  _vListInitialise
+                  0x0021e4                  _vListInitialiseItem
+                  0x00222e                  _vListInsert
+                  0x0021f2                  _vListInsertEnd
+                  0x002398                  _vPortEndScheduler
+                  0x0023c6                  _vPortEnterCritical
+                  0x0023e0                  _vPortExitCritical
+                  0x0026b6                  _vPortFree
+                  0x0026be                  _vPortInitialiseBlocks
+                  0x0026d2                  _vPortYield
+                  0x001928                  _vQueueDelete
+                  0x001cec                  _vTaskEndScheduler
+                  0x002072                  _vTaskInternalSetTimeOutState
+                  0x0020e8                  _vTaskMissedYield
+                  0x001f5a                  _vTaskPlaceOnEventList
+                  0x001f74                  _vTaskPlaceOnUnorderedEventList
+                  0x002006                  _vTaskRemoveFromUnorderedEventList
+                  0x00205a                  _vTaskSetTimeOutState
+                  0x001cb6                  _vTaskStartScheduler
+                  0x001d04                  _vTaskSuspendAll
+                  0x001ef6                  _vTaskSwitchContext
+                  0x000e68                  _xCANModuleClearReceiveFlags
+                  0x0026c6                  _xPortGetFreeHeapSize
+                  0x00236a                  _xPortStartScheduler
+                  0x001382                  _xQueueGenericCreate
+                  0x0012fa                  _xQueueGenericReset
+                  0x0013f4                  _xQueueGenericSend
+                  0x0014d2                  _xQueueGenericSendFromISR
+                  0x00154a                  _xQueueGiveFromISR
+                  0x001ab2                  _xQueueIsQueueEmptyFromISR
+                  0x001af6                  _xQueueIsQueueFullFromISR
+                  0x00175e                  _xQueuePeek
+                  0x0018aa                  _xQueuePeekFromISR
+                  0x0015b6                  _xQueueReceive
+                  0x00183a                  _xQueueReceiveFromISR
+                  0x00168e                  _xQueueSemaphoreTake
+                  0x000e0e                  _xSetModeOperation
+                  0x001dfc                  _xTaskCatchUpTicks
+                  0x002086                  _xTaskCheckForTimeOut
+                  0x001b1a                  _xTaskCreate
+                  0x001dba                  _xTaskGetTickCount
+                  0x001dca                  _xTaskGetTickCountFromISR
+                  0x001e18                  _xTaskIncrementTick
+                  0x001f98                  _xTaskRemoveFromEventList
+                  0x001d10                  _xTaskResumeAll
+                  0x0020f2                  build/GameCat_R3_PGM/production/system/tasks.o:_prvIdleTask
 
 Memory Configuration
 
@@ -408,17 +408,17 @@ usercode
 
 __FBS             0xf80000          0x2
  *(__FBS.sec*)
- __FBS.sec        0xf80000          0x2 /CW/_FBS`ÖÎ
+ __FBS.sec        0xf80000          0x2 /CW/_FBS@Óï
                   0xf80000                  __FBS.sec
 
 __FSS             0xf80002          0x2
  *(__FSS.sec*)
- __FSS.sec        0xf80002          0x2 /CW/_FSS€öÎ
+ __FSS.sec        0xf80002          0x2 /CW/_FSS€ð
                   0xf80002                  __FSS.sec
 
 __FGS             0xf80004          0x2
  *(__FGS.sec*)
- __FGS.sec        0xf80004          0x2 /CW/_FGSà¡Á
+ __FGS.sec        0xf80004          0x2 /CW/_FGS€õâ
                   0xf80004                  __FGS.sec
 
 __FOSCSEL
@@ -1378,9 +1378,9 @@ LOAD c:/program files/microchip/xc16/v1.50/bin/bin/../../lib\libm-elf.a
 LOAD c:/program files/microchip/xc16/v1.50/bin/bin/../../lib\liblega-c-elf.a
 END GROUP
 OUTPUT(dist/GameCat_R3_PGM/production/GameCat_R3_PGM.production.elf elf32-pic30)
-LOAD /CW/_FGSà¡Á
-LOAD /CW/_FSS€öÎ
-LOAD /CW/_FBS`ÖÎ
+LOAD /CW/_FGS€õâ
+LOAD /CW/_FSS€ð
+LOAD /CW/_FBS@Óï
 LOAD jump_table
 LOAD default_isr
 LOAD heap
@@ -1415,9 +1415,9 @@ __c30_signature
  __c30_signature
                   0x000048          0x6 c:/program files/microchip/xc16/v1.50/bin/bin/../../lib\liblega-c-elf.a(memcpy.XX_eo)
 
-_00000000047593205e88e575
+_0000000003FC43205e964ac8
                     0x2700         0x80
- _00000000047593205e88e575
+ _0000000003FC43205e964ac8
                     0x2700         0x80 build/GameCat_R3_PGM/production/drivers/driver_controller_area_network.o
                     0x2700                  _EcanBufferStorage
 
@@ -1460,92 +1460,92 @@ _00000000047593205e88e575
  .const             0x8310         0x20 build/GameCat_R3_PGM/production/system/portable/PIC24_dsPIC/port.o
  .const             0x8330          0x6 build/GameCat_R3_PGM/production/system/tasks.o
 
-.text             0x000336       0x23ee
- .text            0x000336        0xffe build/GameCat_R3_PGM/production/drivers/driver_controller_area_network.o
+.text             0x000336       0x23ec
+ .text            0x000336        0xfc4 build/GameCat_R3_PGM/production/drivers/driver_controller_area_network.o
                   0x000336                  _vConfigureCANModule
-                  0x00043e                  _vCANModuleConfigureBuffers
-                  0x0005b4                  _vCANModuleSelectMaskToFilter
-                  0x000760                  _vCANModuleSetMaskSID
-                  0x0007b6                  _vCANModuleSetFiltersSID
-                  0x000904                  _vCANModuleSetMaskXTD
-                  0x00099e                  _vCANModuleSetFiltersXTD
-                  0x000c4e                  _vCANModuleSelectBufferToFilter
-                  0x000df2                  _vCANModuleSetSendTransmission
-                  0x000e48                  _xSetModeOperation
-                  0x000ea2                  _xCANModuleClearReceiveFlags
-                  0x000f32                  _vCANModuleSendMessege
-                  0x00116c                  _vCANModuleReceiveMessege
- .text            0x001334        0x820 build/GameCat_R3_PGM/production/system/queue.o
-                  0x001334                  _xQueueGenericReset
-                  0x0013bc                  _xQueueGenericCreate
-                  0x00142e                  _xQueueGenericSend
-                  0x00150c                  _xQueueGenericSendFromISR
-                  0x001584                  _xQueueGiveFromISR
-                  0x0015f0                  _xQueueReceive
-                  0x0016c8                  _xQueueSemaphoreTake
-                  0x001798                  _xQueuePeek
-                  0x001874                  _xQueueReceiveFromISR
-                  0x0018e4                  _xQueuePeekFromISR
-                  0x00191c                  _uxQueueMessagesWaiting
-                  0x001930                  _uxQueueSpacesAvailable
-                  0x00194e                  _uxQueueMessagesWaitingFromISR
-                  0x001962                  _vQueueDelete
-                  0x001aec                  _xQueueIsQueueEmptyFromISR
-                  0x001b30                  _xQueueIsQueueFullFromISR
- .text            0x001b54        0x698 build/GameCat_R3_PGM/production/system/tasks.o
-                  0x001b54                  _xTaskCreate
-                  0x001cf0                  _vTaskStartScheduler
-                  0x001d26                  _vTaskEndScheduler
-                  0x001d3e                  _vTaskSuspendAll
-                  0x001d4a                  _xTaskResumeAll
-                  0x001df4                  _xTaskGetTickCount
-                  0x001e04                  _xTaskGetTickCountFromISR
-                  0x001e14                  _uxTaskGetNumberOfTasks
-                  0x001e1c                  _pcTaskGetName
-                  0x001e36                  _xTaskCatchUpTicks
-                  0x001e52                  _xTaskIncrementTick
-                  0x001f30                  _vTaskSwitchContext
-                  0x001f94                  _vTaskPlaceOnEventList
-                  0x001fae                  _vTaskPlaceOnUnorderedEventList
-                  0x001fd2                  _xTaskRemoveFromEventList
-                  0x002040                  _vTaskRemoveFromUnorderedEventList
-                  0x002094                  _vTaskSetTimeOutState
-                  0x0020ac                  _vTaskInternalSetTimeOutState
-                  0x0020c0                  _xTaskCheckForTimeOut
-                  0x002122                  _vTaskMissedYield
-                  0x00212c                  build/GameCat_R3_PGM/production/system/tasks.o:_prvIdleTask
-                  0x002190                  _uxTaskResetEventItemValue
- .text            0x0021ec        0x128 build/GameCat_R3_PGM/production/system/list.o
-                  0x0021ec                  _vListInitialise
-                  0x00221e                  _vListInitialiseItem
-                  0x00222c                  _vListInsertEnd
-                  0x002268                  _vListInsert
-                  0x0022cc                  _uxListRemove
- .text            0x002314        0x122 build/GameCat_R3_PGM/production/system/portable/PIC24_dsPIC/port.o
-                  0x002314                  _pxPortInitialiseStack
-                  0x0023a4                  _xPortStartScheduler
-                  0x0023d2                  _vPortEndScheduler
-                  0x0023d8                  _vApplicationSetupTickTimerInterrupt
-                  0x002400                  _vPortEnterCritical
-                  0x00241a                  _vPortExitCritical
- .text            0x002436         0xe6 build/GameCat_R3_PGM/production/main/main_function.o
-                  0x002436                  _main
- .text            0x00251c         0xd6 build/GameCat_R3_PGM/production/drivers/driver_direct_memory_access.o
-                  0x00251c                  _vConfigureDMAZeroModule
-                  0x002586                  _vConfigureDMAOneModule
- .text            0x0025f2         0x72 build/GameCat_R3_PGM/production/system/portable/MemMang/heap_1.o
-                  0x0025f2                  _pvPortMalloc
-                  0x002648                  _vPortFree
-                  0x002650                  _vPortInitialiseBlocks
-                  0x002658                  _xPortGetFreeHeapSize
- .text            0x002664         0x70 build/GameCat_R3_PGM/production/main/main_configuration.o
-                  0x002664                  _vHardwareConfiguration
- .text            0x0026d4         0x50 build/GameCat_R3_PGM/production/system/portable/PIC24_dsPIC/portasm_PIC24.o
-                  0x0026d4                  _vPortYield
+                  0x000404                  _vCANModuleConfigureBuffers
+                  0x00057a                  _vCANModuleSelectMaskToFilter
+                  0x000726                  _vCANModuleSetMaskSID
+                  0x00077c                  _vCANModuleSetFiltersSID
+                  0x0008ca                  _vCANModuleSetMaskXTD
+                  0x000964                  _vCANModuleSetFiltersXTD
+                  0x000c14                  _vCANModuleSelectBufferToFilter
+                  0x000db8                  _vCANModuleSetSendTransmission
+                  0x000e0e                  _xSetModeOperation
+                  0x000e68                  _xCANModuleClearReceiveFlags
+                  0x000ef8                  _vCANModuleSendMessege
+                  0x001132                  _vCANModuleReceiveMessege
+ .text            0x0012fa        0x820 build/GameCat_R3_PGM/production/system/queue.o
+                  0x0012fa                  _xQueueGenericReset
+                  0x001382                  _xQueueGenericCreate
+                  0x0013f4                  _xQueueGenericSend
+                  0x0014d2                  _xQueueGenericSendFromISR
+                  0x00154a                  _xQueueGiveFromISR
+                  0x0015b6                  _xQueueReceive
+                  0x00168e                  _xQueueSemaphoreTake
+                  0x00175e                  _xQueuePeek
+                  0x00183a                  _xQueueReceiveFromISR
+                  0x0018aa                  _xQueuePeekFromISR
+                  0x0018e2                  _uxQueueMessagesWaiting
+                  0x0018f6                  _uxQueueSpacesAvailable
+                  0x001914                  _uxQueueMessagesWaitingFromISR
+                  0x001928                  _vQueueDelete
+                  0x001ab2                  _xQueueIsQueueEmptyFromISR
+                  0x001af6                  _xQueueIsQueueFullFromISR
+ .text            0x001b1a        0x698 build/GameCat_R3_PGM/production/system/tasks.o
+                  0x001b1a                  _xTaskCreate
+                  0x001cb6                  _vTaskStartScheduler
+                  0x001cec                  _vTaskEndScheduler
+                  0x001d04                  _vTaskSuspendAll
+                  0x001d10                  _xTaskResumeAll
+                  0x001dba                  _xTaskGetTickCount
+                  0x001dca                  _xTaskGetTickCountFromISR
+                  0x001dda                  _uxTaskGetNumberOfTasks
+                  0x001de2                  _pcTaskGetName
+                  0x001dfc                  _xTaskCatchUpTicks
+                  0x001e18                  _xTaskIncrementTick
+                  0x001ef6                  _vTaskSwitchContext
+                  0x001f5a                  _vTaskPlaceOnEventList
+                  0x001f74                  _vTaskPlaceOnUnorderedEventList
+                  0x001f98                  _xTaskRemoveFromEventList
+                  0x002006                  _vTaskRemoveFromUnorderedEventList
+                  0x00205a                  _vTaskSetTimeOutState
+                  0x002072                  _vTaskInternalSetTimeOutState
+                  0x002086                  _xTaskCheckForTimeOut
+                  0x0020e8                  _vTaskMissedYield
+                  0x0020f2                  build/GameCat_R3_PGM/production/system/tasks.o:_prvIdleTask
+                  0x002156                  _uxTaskResetEventItemValue
+ .text            0x0021b2        0x128 build/GameCat_R3_PGM/production/system/list.o
+                  0x0021b2                  _vListInitialise
+                  0x0021e4                  _vListInitialiseItem
+                  0x0021f2                  _vListInsertEnd
+                  0x00222e                  _vListInsert
+                  0x002292                  _uxListRemove
+ .text            0x0022da        0x122 build/GameCat_R3_PGM/production/system/portable/PIC24_dsPIC/port.o
+                  0x0022da                  _pxPortInitialiseStack
+                  0x00236a                  _xPortStartScheduler
+                  0x002398                  _vPortEndScheduler
+                  0x00239e                  _vApplicationSetupTickTimerInterrupt
+                  0x0023c6                  _vPortEnterCritical
+                  0x0023e0                  _vPortExitCritical
+ .text            0x0023fc         0xe6 build/GameCat_R3_PGM/production/main/main_function.o
+                  0x0023fc                  _main
+ .text            0x0024e2         0xd6 build/GameCat_R3_PGM/production/drivers/driver_direct_memory_access.o
+                  0x0024e2                  _vConfigureDMAZeroModule
+                  0x00254c                  _vConfigureDMAOneModule
+ .text            0x0025b8         0xa8 build/GameCat_R3_PGM/production/main/main_configuration.o
+                  0x0025b8                  _vHardwareConfiguration
+ .text            0x002660         0x72 build/GameCat_R3_PGM/production/system/portable/MemMang/heap_1.o
+                  0x002660                  _pvPortMalloc
+                  0x0026b6                  _vPortFree
+                  0x0026be                  _vPortInitialiseBlocks
+                  0x0026c6                  _xPortGetFreeHeapSize
+ .text            0x0026d2         0x50 build/GameCat_R3_PGM/production/system/portable/PIC24_dsPIC/portasm_PIC24.o
+                  0x0026d2                  _vPortYield
 
-.init.delay32     0x002724         0x1c
- .init.delay32    0x002724         0x1c c:/program files/microchip/xc16/v1.50/bin/bin/../../lib\liblega-pic30-elf.a(delay32.Leo)
-                  0x002724                  ___delay32
+.init.delay32     0x002722         0x1c
+ .init.delay32    0x002722         0x1c c:/program files/microchip/xc16/v1.50/bin/bin/../../lib\liblega-pic30-elf.a(delay32.Leo)
+                  0x002722                  ___delay32
 
-.dinit            0x002740         0x1c
- .dinit           0x002740         0x1c data_init
+.dinit            0x00273e         0x1c
+ .dinit           0x00273e         0x1c data_init
