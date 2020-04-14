@@ -1,28 +1,26 @@
 #ifndef DRIVER_CONTROLLER_AREA_NETWORK_H
 #define	DRIVER_CONTROLLER_AREA_NETWORK_H
 
-/* < Include ::: Processor Header >*/
-#include "xc.h"
 /* < Configuration Main Settings > */
 #include "main_typedefs.h"
 #include "main_delays.h"
 
 /* < Definicion ::: Typedef > */
-typedef struct xMessegeECAN{
+typedef struct {
     uint32_t ID; /* 29 bit ID max of 0x1FFF FFFF / 11 bit ID max of 0x7FF */
     uint8_t DataLength;
     uint8_t Data[8];
     uint8_t MessageType; /* RTR message or Data Message */
     uint8_t FrameType; /* Frame Type Extended or Standard */
-    uint8_t NumberBuffer; /* Buffer being used to Send and Receive Messages */
-} xMessegeECAN_t;
+    uint8_t Buffer; /* Buffer being used to Send and Receive Messages */
+} xMessegeECAN;
 
 /* < Definicion ::: ECAN message buffer length > */
 #define CAN_BUFFER_LENGTH               8
 
 /* < Definicion ::: Pines de Control :: CAN_MODULE_ONE > */
-#define TRIS_CAN_TX                     TRISBbits.TRISB11
-#define TRIS_CAN_RX                     TRISBbits.TRISB10
+#define TRIS_CAN_TX                     TRISBbits.TRISB5
+#define TRIS_CAN_RX                     TRISCbits.TRISC5
 
 /* < Definicion ::: Configuracion INT :: CAN_MODULE : Interruption > */
 #define CAN_INT_ENABLE                  0x80     // < enable / disable interrupts
@@ -57,8 +55,8 @@ typedef struct xMessegeECAN{
 #define CAN_CLOCK_SOURCE_FCY            0x0800  /* FCAN is selected to be FCY */
 
 /* < Definicion ::: Configuracion 1 :: CAN_MODULE : C1CTRL1 : REQOP Settings > */
-#define CAN_REQ_OPERMODE_NOR            0x00  /* Module is in Normal Operation mode */
-#define CAN_REQ_OPERMODE_DIS            0x01  /* Module is in Disable mode */
+#define CAN_REQ_OPERMODE_NORMAL         0x00  /* Module is in Normal Operation mode */
+#define CAN_REQ_OPERMODE_DISABLE        0x01  /* Module is in Disable mode */
 #define CAN_REQ_OPERMODE_LOOPBK         0x02  /* Module is in Loopback mode */
 #define CAN_REQ_OPERMODE_LISTENONLY     0x03  /* Module is in Listen Only mode */
 #define CAN_REQ_OPERMODE_CONFIG         0x04  /* Module is in Configuration mode */
@@ -119,29 +117,28 @@ typedef struct xMessegeECAN{
 #define CAN_DMA_BUFFER_SIZE_32          0x06
 
 /* < Macros ::: Control de Identificacion ::: CAN_MODULE > */
-#define CAN_MESSAGE_DATA                0x01
-#define CAN_MESSAGE_RTR                 0x02
-#define CAN_FRAME_STD                   0x03
-#define CAN_FRAME_EXT                   0x04
+#define CAN_FRAME_STD                   0x01
+#define CAN_FRAME_EXT                   0x02
+#define CAN_MSG_DATA                    0x03
+#define CAN_MSG_RTR                     0x04
 
 /* < Macros ::: Numeracion de Buffers ::: CAN_MODULE > */
-#define CAN_BUFFER_CTRL_EMPTY           0xFF
-#define CAN_BUFFER_CTRL_ZERO            0x00
-#define CAN_BUFFER_CTRL_ONE             0x01
-#define CAN_BUFFER_CTRL_TWO             0x02
-#define CAN_BUFFER_CTRL_THREE           0x03
-#define CAN_BUFFER_CTRL_FOUR            0x05
-#define CAN_BUFFER_CTRL_FIVE            0x06
-#define CAN_BUFFER_CTRL_SIX             0x07
-#define CAN_BUFFER_CTRL_SEVEN           0x08
+#define CAN_BUFFER_CTRL_00              0x00
+#define CAN_BUFFER_CTRL_01              0x01
+#define CAN_BUFFER_CTRL_02              0x02
+#define CAN_BUFFER_CTRL_03              0x03
+#define CAN_BUFFER_CTRL_04              0x04
+#define CAN_BUFFER_CTRL_05              0x05
+#define CAN_BUFFER_CTRL_06              0x06
+#define CAN_BUFFER_CTRL_07              0x07
 
 #define CAN_BUFFER_AS_RX                0x00
 #define CAN_BUFFER_AS_TX                0x01
 
-#define CAN_BUFFER_PRIORITY_HIGH        0x03
-#define CAN_BUFFER_PRIORITY_MED_HIGH    0x02
-#define CAN_BUFFER_PRIORITY_MED_LOW     0x01
-#define CAN_BUFFER_PRIORITY_LOW         0x00
+#define CAN_BUFFER_PRIORITY_04          0x03
+#define CAN_BUFFER_PRIORITY_03          0x02
+#define CAN_BUFFER_PRIORITY_02          0x01
+#define CAN_BUFFER_PRIORITY_01          0x00
 
 /* < Macros ::: Numeracion de Maks ::: CAN_MODULE > */
 #define CAN_MASK_NUMBER_00              0x00
@@ -171,23 +168,26 @@ typedef struct xMessegeECAN{
 #define CAN_SETMIDE(SID)                (SID | 0x0008)                      // The Macro will set the MIDE bit in CiRXMxSID
 #define CAN_FILTERSTD(SID)              (SID & 0xFFF7)                      // The macro will clear the EXIDE bit in CiRXFxSID to only accept standard messages
 #define CAN_FILTERXTD(SID)              (SID | 0x0008)                      // The Macro will set the EXIDE bit in CiRXFxSID to only accept extended messages
-#define CAN_FILTERMASK2REG_EID0(x)      (x & 0xFFFF)                        // Macro used to write filter/mask ID to Register CiRXMxSID, CiRXMxEID, CiRXFxSID and CiRXFxEID
-#define CAN_FILTERMASK2REG_EID1(x)      (((x & 0x1FFC)<<0x03)|(x & 0x3))    // Macro used to write filter/mask ID to Register CiRXMxSID, CiRXMxEID, CiRXFxSID and CiRXFxEID
+#define CAN_FILTERMASK2REG_EID0(X)      (X & 0xFFFF)                        // Macro used to write filter/mask ID to Register CiRXMxSID, CiRXMxEID, CiRXFxSID and CiRXFxEID
+#define CAN_FILTERMASK2REG_EID1(X)      (((X & 0x1FFC)<<0x03)|(X & 0x03))   // Macro used to write filter/mask ID to Register CiRXMxSID, CiRXMxEID, CiRXFxSID and CiRXFxEID
 
 /* < Extern ::: Globales ::: Memoria DMA... > */
 extern uint16_t EcanBufferStorage[CAN_BUFFER_LENGTH][8] __attribute__((space(dma), aligned(CAN_BUFFER_LENGTH * 16)));
 
 /* < Prototipo ::: Funciones de Control ::: CAN_MODULE > */
-void vConfigureCANModule(uint8_t Interrupt, uint16_t Config, uint16_t SyncBRP, uint16_t BaudRate_2, uint8_t DMABuffer);
+void vConfigureCANModule(uint8_t Interrupt, uint16_t Config, uint16_t SyncBRP, uint16_t BaudRate_2, uint8_t SizeBufferDMA);
 void vCANModuleConfigureBuffers(uint8_t SetBuffers, uint8_t Priority, uint8_t Selection);
 void vCANModuleSelectMaskToFilter(uint8_t Filter, uint8_t Mask);
 void vCANModuleSetMaskSID(uint8_t Mask, uint16_t SID);
 void vCANModuleSetFiltersSID(uint8_t Filter, uint16_t SID);
+void vCANModuleSetMaskXTD(uint8_t Mask, uint32_t XTD);
+void vCANModuleSetFiltersXTD(uint8_t Filter, uint32_t XTD);
 void vCANModuleSelectBufferToFilter(uint8_t Filter, uint8_t Buffer);
 void vCANModuleSetSendTransmission(uint8_t BufferNumber);
+uint1_t xSetModeOperation(uint8_t Mode);
 uint8_t xCANModuleClearReceiveFlags(void);
-void vCANModuleSendMessege(uint32_t ID, uint8_t DataLength, uint8_t *Data, uint8_t MessageType, uint8_t FrameType, uint8_t NumberBuffer);
-void vCANModuleReceiveMessege(xMessegeECAN_t *Message);
+void vCANModuleSendMessege(xMessegeECAN *Message);
+void vCANModuleReceiveMessege(xMessegeECAN *Message);
 
 #endif	/* < DRIVER_CONTROLLER_AREA_NETWORK_H > */
 

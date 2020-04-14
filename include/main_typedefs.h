@@ -14,6 +14,9 @@
  * Pointer (p)
  * Struct / Others (x) > */
 
+/* < Processor Definitions > */
+#include <xc.h>
+
 /* < Generic Type Definitions > */
 #include <stdint.h> 
 

@@ -24,14 +24,14 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=GameCat_XC24H
+PROJECTNAME=GameCat_R3_PGM
 
 # Active Configuration
-DEFAULTCONF=GameCat_XC24H
+DEFAULTCONF=GameCat_R3_PGM
 CONF=${DEFAULTCONF}
 
 # All Configurations
-ALLCONFS=GameCat_XC24H 
+ALLCONFS=GameCat_R3_PGM 
 
 
 # build
@@ -45,13 +45,13 @@ ALLCONFS=GameCat_XC24H
 
 # clobber
 .clobber-impl: .clobber-pre .depcheck-impl
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=GameCat_XC24H clean
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=GameCat_R3_PGM clean
 
 
 
 # all
 .all-impl: .all-pre .depcheck-impl
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=GameCat_XC24H build
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=GameCat_R3_PGM build
 
 
 

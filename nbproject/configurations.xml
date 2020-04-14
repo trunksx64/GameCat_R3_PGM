@@ -5,32 +5,12 @@
                    displayName="Header Files"
                    projectFiles="true">
       <logicalFolder name="controls" displayName="controls" projectFiles="true">
-        <itemPath>include/control_draw_menu.h</itemPath>
-        <itemPath>include/control_parameters_can.h</itemPath>
-        <itemPath>include/control_struct_menu.h</itemPath>
-        <itemPath>include/control_parameters_system.h</itemPath>
       </logicalFolder>
       <logicalFolder name="drivers" displayName="drivers" projectFiles="true">
-        <itemPath>include/driver_analog_digital_converter.h</itemPath>
         <itemPath>include/driver_controller_area_network.h</itemPath>
-        <itemPath>include/driver_cyclic_redundancy_check.h</itemPath>
-        <itemPath>include/driver_direct_memory_access_one.h</itemPath>
-        <itemPath>include/driver_direct_memory_access_zero.h</itemPath>
-        <itemPath>include/driver_output_compare_one.h</itemPath>
-        <itemPath>include/driver_serial_peripheral_interface_one.h</itemPath>
-        <itemPath>include/driver_timer_two.h</itemPath>
-        <itemPath>include/driver_universal_asynchronous_receiver_transmitter_one.h</itemPath>
-        <itemPath>include/driver_universal_asynchronous_receiver_transmitter_two.h</itemPath>
-        <itemPath>include/driver_timer_five.h</itemPath>
+        <itemPath>include/driver_direct_memory_access.h</itemPath>
       </logicalFolder>
       <logicalFolder name="libraries" displayName="libraries" projectFiles="true">
-        <itemPath>include/library_draw_font.h</itemPath>
-        <itemPath>include/library_draw_primitives.h</itemPath>
-        <itemPath>include/library_glcd_pcd8544.h</itemPath>
-        <itemPath>include/library_joystick.h</itemPath>
-        <itemPath>include/library_management_pulses.h</itemPath>
-        <itemPath>include/library_storage_bitmaps.h</itemPath>
-        <itemPath>include/library_storage_fonts.h</itemPath>
       </logicalFolder>
       <logicalFolder name="main" displayName="main" projectFiles="true">
         <itemPath>include/main_configuration.h</itemPath>
@@ -38,11 +18,12 @@
         <itemPath>include/main_fuses.h</itemPath>
         <itemPath>include/main_typedefs.h</itemPath>
       </logicalFolder>
-      <logicalFolder name="f1" displayName="sources" projectFiles="true">
-        <itemPath>include/source_config_system.h</itemPath>
+      <logicalFolder name="sources" displayName="sources" projectFiles="true">
       </logicalFolder>
-      <logicalFolder name="f2" displayName="system" projectFiles="true">
+      <logicalFolder name="system" displayName="system" projectFiles="true">
         <itemPath>system/include/FreeRTOSConfig.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="threads" displayName="threads" projectFiles="true">
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
@@ -53,60 +34,30 @@
                    displayName="Source Files"
                    projectFiles="true">
       <logicalFolder name="controls" displayName="controls" projectFiles="true">
-        <itemPath>controls/control_draw_menu.c</itemPath>
-        <itemPath>controls/control_parameters_can.c</itemPath>
-        <itemPath>controls/control_struct_menu_can.c</itemPath>
-        <itemPath>controls/control_parameters_system.c</itemPath>
       </logicalFolder>
       <logicalFolder name="drivers" displayName="drivers" projectFiles="true">
-        <itemPath>drivers/driver_analog_digital_converter.c</itemPath>
         <itemPath>drivers/driver_controller_area_network.c</itemPath>
-        <itemPath>drivers/driver_cyclic_redundancy_check.c</itemPath>
-        <itemPath>drivers/driver_direct_memory_access_one.c</itemPath>
-        <itemPath>drivers/driver_direct_memory_access_zero.c</itemPath>
-        <itemPath>drivers/driver_output_compare_one.c</itemPath>
-        <itemPath>drivers/driver_serial_peripheral_interface_one.c</itemPath>
-        <itemPath>drivers/driver_timer_two.c</itemPath>
-        <itemPath>drivers/driver_universal_asynchronous_receiver_transmitter_one.c</itemPath>
-        <itemPath>drivers/driver_universal_asynchronous_receiver_transmitter_two.c</itemPath>
-        <itemPath>drivers/driver_timer_five.c</itemPath>
+        <itemPath>drivers/driver_direct_memory_access.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="include" displayName="include" projectFiles="true">
       </logicalFolder>
       <logicalFolder name="libraries" displayName="libraries" projectFiles="true">
-        <itemPath>libraries/library_draw_font.c</itemPath>
-        <itemPath>libraries/library_draw_primitives.c</itemPath>
-        <itemPath>libraries/library_glcd_pcd8544.c</itemPath>
-        <itemPath>libraries/library_joystick.c</itemPath>
-        <itemPath>libraries/library_storage_bitmaps.c</itemPath>
-        <itemPath>libraries/library_storage_fonts.c</itemPath>
-        <itemPath>libraries/library_management_pulses.c</itemPath>
       </logicalFolder>
       <logicalFolder name="main" displayName="main" projectFiles="true">
-        <itemPath>main/dma_interruptions.c</itemPath>
-        <itemPath>main/main_configuration.c</itemPath>
         <itemPath>main/main_function.c</itemPath>
-        <itemPath>main/main_interruptions.c</itemPath>
-        <itemPath>main/traps_interruptions.c</itemPath>
+        <itemPath>main/main_configuration.c</itemPath>
       </logicalFolder>
-      <logicalFolder name="f1" displayName="sources" projectFiles="true">
-        <itemPath>sources/source_config_event_groups.c</itemPath>
-        <itemPath>sources/source_config_mutex.c</itemPath>
-        <itemPath>sources/source_config_queues.c</itemPath>
-        <itemPath>sources/source_config_tasks.c</itemPath>
-        <itemPath>sources/source_config_timers.c</itemPath>
+      <logicalFolder name="sources" displayName="sources" projectFiles="true">
       </logicalFolder>
-      <logicalFolder name="f2" displayName="system" projectFiles="true">
+      <logicalFolder name="system" displayName="system" projectFiles="true">
         <itemPath>system/list.c</itemPath>
         <itemPath>system/queue.c</itemPath>
         <itemPath>system/tasks.c</itemPath>
-        <itemPath>system/timers.c</itemPath>
-        <itemPath>system/portable/MemMang/heap_4.c</itemPath>
+        <itemPath>system/portable/MemMang/heap_1.c</itemPath>
         <itemPath>system/portable/PIC24_dsPIC/port.c</itemPath>
         <itemPath>system/portable/PIC24_dsPIC/portasm_PIC24.S</itemPath>
-        <itemPath>system/event_groups.c</itemPath>
       </logicalFolder>
       <logicalFolder name="threads" displayName="threads" projectFiles="true">
-        <itemPath>threads/thread_screen_menu.c</itemPath>
-        <itemPath>threads/threads_timer_system.c</itemPath>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
@@ -118,17 +69,16 @@
   <sourceRootList>
     <Elem>controls</Elem>
     <Elem>drivers</Elem>
+    <Elem>include</Elem>
     <Elem>libraries</Elem>
     <Elem>main</Elem>
-    <Elem>threads</Elem>
-    <Elem>protothreads</Elem>
-    <Elem>include</Elem>
     <Elem>sources</Elem>
     <Elem>system</Elem>
+    <Elem>threads</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
-    <conf name="GameCat_XC24H" type="2">
+    <conf name="GameCat_R3_PGM" type="2">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <targetDevice>PIC24HJ128GP504</targetDevice>
@@ -140,7 +90,7 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="dsPIC33F-GP-MC_DFP" vendor="Microchip" version="1.1.15"/>
+        <pack name="dsPIC33F-GP-MC_DFP" vendor="Microchip" version="1.2.35"/>
       </packs>
       <compileType>
         <linkerTool>
@@ -167,9 +117,9 @@
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
       <C30>
-        <property key="code-model" value="large-code"/>
+        <property key="code-model" value="small-code"/>
         <property key="const-model" value="const-in-code"/>
-        <property key="data-model" value="large-data"/>
+        <property key="data-model" value="small-data"/>
         <property key="disable-instruction-scheduling" value="false"/>
         <property key="enable-all-warnings" value="true"/>
         <property key="enable-ansi-std" value="false"/>
@@ -179,13 +129,12 @@
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-procedural-abstraction" value="false"/>
         <property key="enable-short-double" value="false"/>
-        <property key="enable-symbols" value="true"/>
+        <property key="enable-symbols" value="false"/>
         <property key="enable-unroll-loops" value="false"/>
-        <property key="extra-include-directories"
-                  value="include;drivers;libraries;controls;main;sources;threads;system;system\include;system\portable\MemMang;system\portable\PIC24_dsPIC"/>
+        <property key="extra-include-directories" value=""/>
         <property key="isolate-each-function" value="false"/>
         <property key="keep-inline" value="false"/>
-        <property key="oXC16gcc-align-arr" value="true"/>
+        <property key="oXC16gcc-align-arr" value="false"/>
         <property key="oXC16gcc-cnsts-mauxflash" value="false"/>
         <property key="oXC16gcc-data-sects" value="false"/>
         <property key="oXC16gcc-errata" value=""/>
@@ -203,7 +152,7 @@
         <property key="post-instruction-scheduling" value="default"/>
         <property key="pre-instruction-scheduling" value="default"/>
         <property key="preprocessor-macros" value=""/>
-        <property key="scalar-model" value="large-scalar"/>
+        <property key="scalar-model" value="small-scalar"/>
         <property key="use-cci" value="false"/>
         <property key="use-iar" value="false"/>
       </C30>
@@ -254,7 +203,7 @@
         <property key="general-code-protect" value="no_code_protect"/>
         <property key="general-write-protect" value="no_write_protect"/>
         <property key="generate-cross-reference-file" value="false"/>
-        <property key="heap-size" value="32"/>
+        <property key="heap-size" value="16"/>
         <property key="input-libraries" value=""/>
         <property key="linker-stack" value="true"/>
         <property key="linker-symbols" value=""/>
@@ -267,7 +216,7 @@
         <property key="oXC16ld-nostdlib" value="false"/>
         <property key="oXC16ld-stackguard" value="16"/>
         <property key="preprocessor-macros" value=""/>
-        <property key="remove-unused-sections" value="true"/>
+        <property key="remove-unused-sections" value="false"/>
         <property key="report-memory-usage" value="false"/>
         <property key="secure-eeprom" value="no_eeprom"/>
         <property key="secure-flash" value="no_flash"/>
@@ -279,83 +228,21 @@
         <property key="warn-section-align" value="false"/>
       </C30-LD>
       <C30Global>
-        <property key="common-include-directories" value=""/>
+        <property key="common-include-directories"
+                  value="include;drivers;libraries;controls;main;sources;threads;system;system\include;system\portable\MemMang;system\portable\PIC24_dsPIC"/>
         <property key="dual-boot-partition" value="0"/>
         <property key="fast-math" value="false"/>
         <property key="generic-16-bit" value="false"/>
-        <property key="legacy-libc" value="false"/>
+        <property key="legacy-libc" value="true"/>
         <property key="mpreserve-all" value="false"/>
         <property key="oXC16glb-macros" value=""/>
+        <property key="omit-pack-options" value="1"/>
         <property key="output-file-format" value="elf"/>
         <property key="preserve-all" value="false"/>
         <property key="preserve-file" value=""/>
         <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
-        <appendMe value=" -std=gnu99"/>
       </C30Global>
-      <ICD3PlatformTool>
-        <property key="ADC 1" value="true"/>
-        <property key="AutoSelectMemRanges" value="auto"/>
-        <property key="CRC" value="true"/>
-        <property key="DUAL COMPARATOR" value="true"/>
-        <property key="ECAN" value="true"/>
-        <property key="Freeze All Other Peripherals" value="true"/>
-        <property key="I2C1" value="true"/>
-        <property key="INPUT CAPTURE 1" value="true"/>
-        <property key="INPUT CAPTURE 2" value="true"/>
-        <property key="INPUT CAPTURE 7" value="true"/>
-        <property key="INPUT CAPTURE 8" value="true"/>
-        <property key="OUTPUT COMPARE 1" value="true"/>
-        <property key="OUTPUT COMPARE 2" value="true"/>
-        <property key="OUTPUT COMPARE 3" value="true"/>
-        <property key="OUTPUT COMPARE 8" value="true"/>
-        <property key="PARALLEL MASTER/SLAVE PORT" value="true"/>
-        <property key="REAL TIME CLOCK AND CALENDAR" value="true"/>
-        <property key="SPI 1" value="true"/>
-        <property key="SPI 2" value="true"/>
-        <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
-        <property key="TIMER1" value="true"/>
-        <property key="TIMER2" value="true"/>
-        <property key="TIMER3" value="true"/>
-        <property key="TIMER4" value="true"/>
-        <property key="TIMER5" value="true"/>
-        <property key="ToolFirmwareFilePath"
-                  value="Press to browse for a specific firmware version"/>
-        <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
-        <property key="UART 1" value="true"/>
-        <property key="UART 2" value="true"/>
-        <property key="debugoptions.useswbreakpoints" value="true"/>
-        <property key="hwtoolclock.frcindebug" value="false"/>
-        <property key="memories.aux" value="false"/>
-        <property key="memories.bootflash" value="false"/>
-        <property key="memories.configurationmemory" value="true"/>
-        <property key="memories.configurationmemory2" value="true"/>
-        <property key="memories.dataflash" value="true"/>
-        <property key="memories.eeprom" value="true"/>
-        <property key="memories.flashdata" value="true"/>
-        <property key="memories.id" value="true"/>
-        <property key="memories.instruction.ram" value="true"/>
-        <property key="memories.instruction.ram.ranges"
-                  value="${memories.instruction.ram.ranges}"/>
-        <property key="memories.programmemory" value="true"/>
-        <property key="memories.programmemory.ranges" value="0-157ff"/>
-        <property key="poweroptions.powerenable" value="false"/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
-        <property key="programoptions.eraseb4program" value="true"/>
-        <property key="programoptions.preservedataflash" value="false"/>
-        <property key="programoptions.preservedataflash.ranges" value=""/>
-        <property key="programoptions.preserveeeprom" value="false"/>
-        <property key="programoptions.preserveeeprom.ranges" value=""/>
-        <property key="programoptions.preserveprogram.ranges" value=""/>
-        <property key="programoptions.preserveprogramrange" value="false"/>
-        <property key="programoptions.preserveuserid" value="false"/>
-        <property key="programoptions.programcalmem" value="false"/>
-        <property key="programoptions.programuserotp" value="false"/>
-        <property key="programoptions.testmodeentrymethod" value="VDDFirst"/>
-        <property key="programoptions.usehighvoltageonmclr" value="false"/>
-        <property key="programoptions.uselvpprogramming" value="false"/>
-        <property key="voltagevalue" value="3.25"/>
-      </ICD3PlatformTool>
       <ICD4Tool>
         <property key="ADC 1" value="true"/>
         <property key="AutoSelectMemRanges" value="auto"/>
@@ -386,6 +273,8 @@
                   value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UpdateOptions"
                   value="ToolFirmwareOption.UseLatest"/>
+        <property key="ToolFirmwareToolPack"
+                  value="Press to select which tool pack to use"/>
         <property key="UART 1" value="true"/>
         <property key="UART 2" value="true"/>
         <property key="communication.interface.jtag" value="2wire"/>
@@ -425,74 +314,12 @@
         <property key="programoptions.programcalmem" value="false"/>
         <property key="programoptions.programuserotp" value="false"/>
         <property key="programoptions.testmodeentrymethod" value="VDDFirst"/>
+        <property key="toolpack.updateoptions"
+                  value="toolpack.updateoptions.uselatestoolpack"/>
+        <property key="toolpack.updateoptions.packversion"
+                  value="Press to select which tool pack to use"/>
         <property key="voltagevalue" value="3.25"/>
       </ICD4Tool>
-      <PICkit3PlatformTool>
-        <property key="ADC 1" value="true"/>
-        <property key="AutoSelectMemRanges" value="auto"/>
-        <property key="CRC" value="true"/>
-        <property key="DUAL COMPARATOR" value="true"/>
-        <property key="ECAN" value="true"/>
-        <property key="Freeze All Other Peripherals" value="true"/>
-        <property key="I2C1" value="true"/>
-        <property key="INPUT CAPTURE 1" value="true"/>
-        <property key="INPUT CAPTURE 2" value="true"/>
-        <property key="INPUT CAPTURE 7" value="true"/>
-        <property key="INPUT CAPTURE 8" value="true"/>
-        <property key="OUTPUT COMPARE 1" value="true"/>
-        <property key="OUTPUT COMPARE 2" value="true"/>
-        <property key="OUTPUT COMPARE 3" value="true"/>
-        <property key="OUTPUT COMPARE 8" value="true"/>
-        <property key="PARALLEL MASTER/SLAVE PORT" value="true"/>
-        <property key="REAL TIME CLOCK AND CALENDAR" value="true"/>
-        <property key="SPI 1" value="true"/>
-        <property key="SPI 2" value="true"/>
-        <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
-        <property key="TIMER1" value="true"/>
-        <property key="TIMER2" value="true"/>
-        <property key="TIMER3" value="true"/>
-        <property key="TIMER4" value="true"/>
-        <property key="TIMER5" value="true"/>
-        <property key="ToolFirmwareFilePath"
-                  value="Press to browse for a specific firmware version"/>
-        <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
-        <property key="UART 1" value="true"/>
-        <property key="UART 2" value="true"/>
-        <property key="debugoptions.useswbreakpoints" value="false"/>
-        <property key="hwtoolclock.frcindebug" value="false"/>
-        <property key="memories.aux" value="false"/>
-        <property key="memories.bootflash" value="true"/>
-        <property key="memories.configurationmemory" value="true"/>
-        <property key="memories.configurationmemory2" value="true"/>
-        <property key="memories.dataflash" value="true"/>
-        <property key="memories.eeprom" value="true"/>
-        <property key="memories.flashdata" value="true"/>
-        <property key="memories.id" value="true"/>
-        <property key="memories.instruction.ram" value="true"/>
-        <property key="memories.instruction.ram.ranges"
-                  value="${memories.instruction.ram.ranges}"/>
-        <property key="memories.programmemory" value="true"/>
-        <property key="memories.programmemory.ranges" value="0-157ff"/>
-        <property key="poweroptions.powerenable" value="false"/>
-        <property key="programmertogo.imagename" value=""/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
-        <property key="programoptions.eraseb4program" value="true"/>
-        <property key="programoptions.pgmspeed" value="2"/>
-        <property key="programoptions.preservedataflash" value="false"/>
-        <property key="programoptions.preservedataflash.ranges"
-                  value="${programoptions.preservedataflash.ranges}"/>
-        <property key="programoptions.preserveeeprom" value="false"/>
-        <property key="programoptions.preserveeeprom.ranges" value=""/>
-        <property key="programoptions.preserveprogram.ranges" value=""/>
-        <property key="programoptions.preserveprogramrange" value="false"/>
-        <property key="programoptions.preserveuserid" value="false"/>
-        <property key="programoptions.programcalmem" value="false"/>
-        <property key="programoptions.programuserotp" value="false"/>
-        <property key="programoptions.testmodeentrymethod" value="VDDFirst"/>
-        <property key="programoptions.usehighvoltageonmclr" value="false"/>
-        <property key="programoptions.uselvpprogramming" value="false"/>
-        <property key="voltagevalue" value="3.25"/>
-      </PICkit3PlatformTool>
       <Simulator>
         <property key="codecoverage.enabled" value="Disable"/>
         <property key="codecoverage.enableoutputtofile" value="false"/>
@@ -759,6 +586,12 @@
         <property key="warningmessagebreakoptions.W0243_ADC_INVALID_TAD" value="report"/>
         <property key="warningmessagebreakoptions.W0244_ADC_CONVERSION_ABORTED"
                   value="report"/>
+        <property key="warningmessagebreakoptions.W0245_ADC_BUFREGEN_NOT_ALLOWED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0246_ADC_ACCUMULATION_BAD_RESSEL"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0247_ADC_CONVERSION_BAD_RESSEL"
+                  value="report"/>
         <property key="warningmessagebreakoptions.W0400_PWM_PWM_FASTER_THAN_FOSC"
                   value="report"/>
         <property key="warningmessagebreakoptions.W0600_WDT_2ND_WDT_MR_WRITE"
@@ -859,6 +692,8 @@
                   value="report"/>
         <property key="warningmessagebreakoptions.W8001_OSC_INVALID_CLOCK_SOURCE"
                   value="report"/>
+        <property key="warningmessagebreakoptions.W8002_OSC_RESERVED_FEXTOSC"
+                  value="report"/>
         <property key="warningmessagebreakoptions.W9001_TMR_GATE_AND_EXTCLOCK_ENABLED"
                   value="report"/>
         <property key="warningmessagebreakoptions.W9002_TMR_NO_PIN_AVAILABLE"
@@ -916,6 +751,90 @@
                   value=""/>
         <property key="warningmessagebreakoptions.warningmessages" value="holdstate"/>
       </Simulator>
+      <pk4hybrid>
+        <property key="ADC 1" value="true"/>
+        <property key="AutoSelectMemRanges" value="auto"/>
+        <property key="CRC" value="true"/>
+        <property key="DUAL COMPARATOR" value="true"/>
+        <property key="ECAN" value="true"/>
+        <property key="Freeze All Other Peripherals" value="true"/>
+        <property key="I2C1" value="true"/>
+        <property key="INPUT CAPTURE 1" value="true"/>
+        <property key="INPUT CAPTURE 2" value="true"/>
+        <property key="INPUT CAPTURE 7" value="true"/>
+        <property key="INPUT CAPTURE 8" value="true"/>
+        <property key="OUTPUT COMPARE 1" value="true"/>
+        <property key="OUTPUT COMPARE 2" value="true"/>
+        <property key="OUTPUT COMPARE 3" value="true"/>
+        <property key="OUTPUT COMPARE 8" value="true"/>
+        <property key="PARALLEL MASTER/SLAVE PORT" value="true"/>
+        <property key="REAL TIME CLOCK AND CALENDAR" value="true"/>
+        <property key="SPI 1" value="true"/>
+        <property key="SPI 2" value="true"/>
+        <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
+        <property key="TIMER1" value="true"/>
+        <property key="TIMER2" value="true"/>
+        <property key="TIMER3" value="true"/>
+        <property key="TIMER4" value="true"/>
+        <property key="TIMER5" value="true"/>
+        <property key="ToolFirmwareFilePath"
+                  value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareOption.UpdateOptions"
+                  value="ToolFirmwareOption.UseLatest"/>
+        <property key="ToolFirmwareToolPack"
+                  value="Press to select which tool pack to use"/>
+        <property key="UART 1" value="true"/>
+        <property key="UART 2" value="true"/>
+        <property key="communication.activationmode" value="nohv"/>
+        <property key="communication.interface"
+                  value="${communication.interface.default}"/>
+        <property key="communication.interface.jtag" value="2wire"/>
+        <property key="communication.speed" value="${communication.speed.default}"/>
+        <property key="debugoptions.useswbreakpoints" value="true"/>
+        <property key="memories.aux" value="false"/>
+        <property key="memories.bootflash" value="true"/>
+        <property key="memories.configurationmemory" value="true"/>
+        <property key="memories.configurationmemory2" value="true"/>
+        <property key="memories.dataflash" value="true"/>
+        <property key="memories.eeprom" value="true"/>
+        <property key="memories.exclude.configurationmemory" value="true"/>
+        <property key="memories.flashdata" value="true"/>
+        <property key="memories.id" value="true"/>
+        <property key="memories.instruction.ram.ranges"
+                  value="${memories.instruction.ram.ranges}"/>
+        <property key="memories.programmemory" value="true"/>
+        <property key="memories.programmemory.ranges" value="0-157ff"/>
+        <property key="poweroptions.powerenable" value="false"/>
+        <property key="programmerToGoImageName" value="GameCat_R3_PGM_ptg"/>
+        <property key="programoptions.donoteraseauxmem" value="false"/>
+        <property key="programoptions.eraseb4program" value="true"/>
+        <property key="programoptions.ledbrightness" value="5"/>
+        <property key="programoptions.pgcconfig" value="pull down"/>
+        <property key="programoptions.pgcresistor.value" value="4.7"/>
+        <property key="programoptions.pgdconfig" value="pull down"/>
+        <property key="programoptions.pgdresistor.value" value="4.7"/>
+        <property key="programoptions.pgmentry.voltage" value="low"/>
+        <property key="programoptions.pgmspeed" value="Med"/>
+        <property key="programoptions.preservedataflash" value="false"/>
+        <property key="programoptions.preservedataflash.ranges"
+                  value="${memories.dataflash.default}"/>
+        <property key="programoptions.preserveeeprom" value="false"/>
+        <property key="programoptions.preserveeeprom.ranges" value=""/>
+        <property key="programoptions.preserveprogram.ranges" value=""/>
+        <property key="programoptions.preserveprogramrange" value="false"/>
+        <property key="programoptions.preserveuserid" value="false"/>
+        <property key="programoptions.programcalmem" value="false"/>
+        <property key="programoptions.programuserotp" value="false"/>
+        <property key="programoptions.testmodeentrymethod" value="VDDFirst"/>
+        <property key="programoptionsedbg.eraseb4program" value="true"/>
+        <property key="ptgProgramImage" value="true"/>
+        <property key="ptgSendImage" value="true"/>
+        <property key="toolpack.updateoptions"
+                  value="toolpack.updateoptions.uselatestoolpack"/>
+        <property key="toolpack.updateoptions.packversion"
+                  value="Press to select which tool pack to use"/>
+        <property key="voltagevalue" value="3.25"/>
+      </pk4hybrid>
     </conf>
   </confs>
 </configurationDescriptor>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project>
+  <executable name="dist/GameCat_R3_PGM/debug/GameCat_R3_PGM.debug.elf">
+    <memory name="data">
+      <units>bytes</units>
+      <length>8192</length>
+      <used>1518</used>
+      <free>6674</free>
+    </memory>
+    <memory name="program">
+      <units>bytes</units>
+      <length>131328</length>
+      <used>14349</used>
+      <free>116979</free>
+    </memory>
+  </executable>
+</project>

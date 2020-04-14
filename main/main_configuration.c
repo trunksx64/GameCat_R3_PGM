@@ -18,15 +18,24 @@ void vHardwareConfiguration(void) {
     /* < Wait for Clock switch to occur >*/
     while (OSCCONbits.COSC != 0b011);
     /* < Wait for PLL to lock >*/
-    while (OSCCONbits.LOCK != pdSet) { };
+    while (OSCCONbits.LOCK != pdSet);
     /* < Configuracion ::: Puertos de Entrada > */
     TRISA = 0xFFFF; // < All Inputs in Ports     
     TRISB = 0xFFFF; // < All Inputs in Ports
     TRISC = 0xFFFF; // < All Inputs in Ports
     /* < Configuracion ::: Conversor A/D (All Input Digital) > */
     AD1PCFGL = 0xFFFF;
-    /* < Configuracion ::: Desactivacion Modulos por Hardware > */
-    PMD1 = 0xFFFF; // < Peripheral modules is disabled
+    /* < Configuracion ::: Activavion/Desactivacion Modulos por Hardware > */
+    PMD1 = 0xFFF9; // < Peripheral modules is disabled
     PMD2 = 0xFFFF; // < Peripheral modules is disabled
     PMD3 = 0xFFFF; // < Peripheral modules is disabled  
+    /* < Configuracion ::: Mutiplexor de I/O :: for Peripherals (PIC24H)... > */
+    __builtin_write_OSCCONL(OSCCON & ~(0x40));
+    /**************************************************************************/
+    RPOR2bits.RP5R = 0b10000; // < RP5 tied to ECAN Transmit    
+    RPINR26bits.C1RXR = 0b10101; // < Input tied to RP21 ECAN Receive  
+    /**************************************************************************/
+
+
+    __builtin_write_OSCCONL(OSCCON | 0x40);
 }

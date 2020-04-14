@@ -3,8 +3,8 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>GameCat_XC24H</name>
-            <creation-uuid>14c67e0a-759e-44a1-9f93-e3b7e50ff1e3</creation-uuid>
+            <name>GameCat_R3_PGM</name>
+            <creation-uuid>dded5c66-6ebd-41e4-a5c8-334a34df4263</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>
             <cpp-extensions/>
@@ -15,17 +15,16 @@
             <sourceRootList>
                 <sourceRootElem>controls</sourceRootElem>
                 <sourceRootElem>drivers</sourceRootElem>
+                <sourceRootElem>include</sourceRootElem>
                 <sourceRootElem>libraries</sourceRootElem>
                 <sourceRootElem>main</sourceRootElem>
-                <sourceRootElem>threads</sourceRootElem>
-                <sourceRootElem>protothreads</sourceRootElem>
-                <sourceRootElem>include</sourceRootElem>
                 <sourceRootElem>sources</sourceRootElem>
                 <sourceRootElem>system</sourceRootElem>
+                <sourceRootElem>threads</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>
-                    <name>GameCat_XC24H</name>
+                    <name>GameCat_R3_PGM</name>
                     <type>2</type>
                 </confElem>
             </confList>
